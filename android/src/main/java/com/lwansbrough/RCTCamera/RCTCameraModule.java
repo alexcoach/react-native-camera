@@ -750,18 +750,21 @@ public class RCTCameraModule extends ReactContextBaseJavaModule
             Log.e(TAG, "Unsupported media type:" + type);
             return null;
         }
-
-        return getOutputFile(
-                type,
-                Environment.getExternalStoragePublicDirectory(environmentDirectoryType)
-        );
+        // diabled by security reasons
+        return null;
+        // return getOutputFile(
+        //         type,
+        //         Environment.getExternalStoragePublicDirectory(environmentDirectoryType)
+        // );
     }
 
     private File getOutputCameraRollFile(int type) {
-        return getOutputFile(
-                type,
-                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)
-        );
+        // disabled by security reasons
+        return null;
+        // return getOutputFile(
+        //         type,
+        //         Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)
+        // );
     }
 
     private File getOutputFile(int type, File storageDir) {
